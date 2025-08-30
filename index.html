@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<title>Heimaverkefni 2</title>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+
+void
+main()
+{
+	gl_PointSize = 3.0;
+    gl_Position = vPosition;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+
+void
+main()
+{
+    gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );
+}
+</script>
+
+<script type="text/javascript" src="../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../Common/initShaders.js"></script>
+<script type="text/javascript" src="../Common/MV.js"></script>
+<script type="text/javascript" src="gasket1.js"></script>
+<script type="text/javascript" src="circlefan.js"></script>
+<script type="text/javascript" src="T-shape-strip.js"></script>
+<script type="text/javascript" src="clickpoints.js"></script>
+<script type="text/javascript" src="gasket2.js"></script>
+</head>
+
+<p>
+<canvas id="gl-gasket1" width="512" height="512">its 2025 what browser are you using?</canvas>
+<br>
+<div class="row">
+    <label for="segments"><b>Fjöldi punkta í hring frá miðju </b>(3–50):</label>
+    <input id="segments" type="range" min="3" max="50" value="20" step="1" />
+    <output id="segVal">20</output>
+</div>
+<br>
+<canvas id="gl-circlefan" width="512" height="512">its 2025 what browser are you using?</canvas>
+<br>
+<canvas id="gl-T-shape" width="512" height="512">its 2025 what browser are you using?</canvas>
+<br>
+<canvas id="gl-clickpoints" width="512" height="512">its 2025 what browser are you using?</canvas>
+<br>
+<canvas id="gl-gasket2" width="512" height="512">its 2025 what browser are you using?</canvas>
+</body>
+</html>
